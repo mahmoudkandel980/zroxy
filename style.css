@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #131616;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    z-index: -10;
+}
+
+.frame {
+    background: #f70000;
+    height: 350px;
+    width: 350px;
+    position: absolute;
+    z-index: 3;
+    border-radius: 50%;
+    filter: blur(5px);
+    border: 2px solid #fbfa35;
+}
+
+.define-oclock ul {
+    list-style: none;
+    background-color: transparent;
+    opacity: 0.5;
+    position: relative;
+    z-index: 100;
+    width: 310px;
+    height: 310px;
+    top: 4px;
+    left: 20px;
+    border-radius: 50%;
+}
+.define-oclock ul li {
+    background-color: #fff;
+    width: 12px;
+    height: 30px;
+    position: absolute;
+    border-bottom: 10px solid #f70000;
+}
+
+.define-oclock ul li:nth-of-type(1) {
+    left: 149px;
+}
+.define-oclock ul li:nth-of-type(2) {
+    left: 218px;
+    top: 19px;
+    transform: rotate(30deg);
+}
+.define-oclock ul li:nth-of-type(3) {
+    left: 269px;
+    top: 68px;
+    transform: rotate(60deg);
+}
+
+.define-oclock ul li:nth-of-type(4) {
+    left: 289px;
+    top: 141px;
+    transform: rotate(90deg);
+}
+.define-oclock ul li:nth-of-type(5) {
+    left: 270px;
+    top: 210px;
+    transform: rotate(120deg);
+}
+
+.define-oclock ul li:nth-of-type(6) {
+    left: 220px;
+    top: 260px;
+    transform: rotate(150deg);
+}
+.define-oclock ul li:nth-of-type(7) {
+    left: 149px;
+    top: 280px;
+    transform: rotate(180deg);
+}
+.define-oclock ul li:nth-of-type(8) {
+    left: 79px;
+    top: 262px;
+    transform: rotate(210deg);
+}
+.define-oclock ul li:nth-of-type(9) {
+    left: 29px;
+    top: 211px;
+    transform: rotate(240deg);
+}
+.define-oclock ul li:nth-of-type(10) {
+    left: 9px;
+    top: 141px;
+    transform: rotate(270deg);
+}
+.define-oclock ul li:nth-of-type(11) {
+    left: 26px;
+    top: 72px;
+    transform: rotate(300deg);
+}
+.define-oclock ul li:nth-of-type(12) {
+    left: 77px;
+    top: 20px;
+    transform: rotate(330deg);
+}
+
+.clock-background {
+    position: absolute;
+    background: #2e2c2c;
+    height: 330px;
+    width: 330px;
+    left: 10px;
+    top: 10px;
+    border-radius: 50%;
+    z-index: 10;
+    border: 2px solid #fbfa35;
+    filter: blur(0.3px);
+}
+.center {
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+    top: 152px;
+    left: 151px;
+    z-index: 100;
+    filter: blur(2px);
+}
+
+.center div {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #f70000;
+    border: 1px solid #fbfa35;
+    border-radius: 50%;
+    left: 2px;
+    top: 2px;
+    filter: blur(2px);
+}
+
+.arrow-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: -24px;
+    border-radius: 50%;
+    opacity: 0.2;
+}
+
+/* hours arrow */
+.arrow-container .arrow-hr {
+    position: relative;
+    height: 75px;
+    width: 12px;
+    background-color: #fff;
+    left: 157px;
+    top: 88px;
+    transform-origin: bottom center;
+    z-index: 10;
+}
+.arrow-container .arrow-hr .down-direction {
+    background-color: #fff;
+    height: 25px;
+    width: 12px;
+    display: block;
+    position: absolute;
+    top: 75px;
+}
+.arrow-container .arrow-hr .hr-decoration {
+    background-color: #f70000;
+    height: 20px;
+    width: 12 px;
+    display: block;
+    top: 100px;
+}
+
+/* min arrow */
+.arrow-container .arrow-min {
+    position: relative;
+    height: 100px;
+    width: 10px;
+    background-color: #fff;
+    left: 158px;
+    top: -10px;
+    transform-origin: bottom center;
+    z-index: 11;
+}
+.arrow-container .arrow-min .down-direction {
+    background-color: #fff;
+    height: 20px;
+    width: 10px;
+    display: block;
+    position: absolute;
+    top: 100px;
+}
+.arrow-container .arrow-min .min-decoration {
+    background-color: #f70000;
+    height: 20px;
+    width: 10px;
+    display: block;
+    top: 100px;
+}
+
+/* sec arrow */
+.arrow-container .arrow-sec {
+    position: relative;
+    height: 115px;
+    width: 8px;
+    background-color: #fff;
+    left: 159px;
+    top: -125px;
+    transform-origin: bottom center;
+    z-index: 12;
+}
+.arrow-container .arrow-sec .down-direction {
+    background-color: #fff;
+    height: 20px;
+    width: 8px;
+    display: block;
+    position: absolute;
+    top: 115px;
+}
+
+.arrow-container .arrow-sec .sec-decoration {
+    background-color: #f70000;
+    height: 20px;
+    width: 8px;
+    display: block;
+    top: 100px;
+}
+
+.digit-watch {
+    position: relative;
+    top: -55px;
+    left: 87px;
+    width: 150px;
+    height: 20px;
+    background-color: #131616;
+    display: flex;
+    justify-content: space-around;
+    z-index: 1;
+    border-radius: 5px;
+    border: 1px solid #000000;
+}
+
+.show {
+    animation: show 1s linear infinite;
+}
+
+.complete-date {
+    position: relative;
+    top: -51px;
+    left: 108px;
+    width: 110px;
+    height: 20px;
+    background-color: #131616;
+    display: flex;
+    justify-content: space-around;
+    z-index: 1;
+    border-radius: 5px;
+    border: 1px solid #000000;
+}
+
+.day {
+    position: relative;
+    top: -178px;
+    left: 85px;
+    width: 50px;
+    height: 20px;
+    background-color: #131616;
+    display: flex;
+    justify-content: space-around;
+    z-index: 1;
+    border-radius: 5px;
+    border: 1px solid #000000;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* this class to git the exactily position of li*/
+/* .clock-background {
+    position: absolute;
+    background: #2e2c2c;
+    background: conic-gradient(
+        #b75555 0%,
+        #a4634c 8.332%,
+        #a46f4c 8.333%,
+        #a4814c 16.665%,
+        #a48f4c 16.666%,
+        #a49e4c 24.999%,
+        #9ba44c 25%,
+        #8aa44c 33.32%,
+        #74a44c 33.33%,
+        #62a44c 41.65%,
+        #a44c4c 41.65%,
+        #4ca469 49.999%,
+        #0a0a0a 50%,
+        #a4634c 58.332%,
+        #ff6600 58.333%,
+        #a4814c 66.665%,
+        #000000 66.666%,
+        #a49e4c 74.999%,
+        #e5ff00 75%,
+        #000000 83.32%,
+        #74a44c 83.33%,
+        #74a44c 91.64%,
+        #000000 91.65%,
+        #4ca469 99.999%,
+        #00ffb3 100%
+    );
+    height: 330px;
+    width: 330px;
+    left: 10px;
+    top: 10px;
+    border-radius: 50%;
+    z-index: 10;
+    border: 2px solid #fbfa35;
+} */
