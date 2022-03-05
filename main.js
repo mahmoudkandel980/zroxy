@@ -37,11 +37,13 @@ date()
 
 //fuction that control into diggit oclock
 function numberOclock(hour, min, sec, AM) {
-    //hour number
+    //hour number && PM AM
     if (hour > 12) {
         hourNumber.innerText = hour - 12;
+        pmAm.innerText = 'PM'
     } else {
         hourNumber.innerText = hour;
+        pmAm.innerText = 'AM'
     }
     //min number
     if (min < 10) {
@@ -55,13 +57,6 @@ function numberOclock(hour, min, sec, AM) {
         secNumber.innerText = `0${sec}`;
     } else {
         secNumber.innerText = sec;
-    }
-
-    //AM or PM
-    if (AM.includes('AM')) {
-        pmAm.innerText = 'AM'
-    } else {
-        pmAm.innerText = 'PM'
     }
 }
 
@@ -85,4 +80,3 @@ function dateData(date, month) {
     yearInner.innerText = FullData[3];
     dayInner.innerText = FullData[0]
 }
-
